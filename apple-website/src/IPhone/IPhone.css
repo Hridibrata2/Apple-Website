@@ -1,0 +1,45 @@
+.e {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f7;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  height: 85vh;
+  margin-top: 12px;
+}
+
+.headers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-weight: 530;
+  font-size: 57px;
+  margin-top: 55px;
+  margin-bottom: 9px;
+}
+
+.quote {
+  font-size: 27px;
+  font-weight: 450;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.iphoneE_img {
+  display: flex;
+  margin-top: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iphoneE_img img {
+  margin-top: 5px;
+  width: 1000px;
+  height: auto;
+}

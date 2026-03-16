@@ -1,0 +1,45 @@
+.macbook{
+height: 85vh;
+  background-color: black;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-weight: 500;
+  font-size: 55px;
+  margin-top: 50px;
+  margin-bottom: 9px;
+  color: white;
+}
+
+.line {
+  font-size: 27px;
+  font-weight: 450;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.macbook_img {
+   display: flex;
+   margin-top: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.macbook_img img {
+  width: 550px;
+  height: auto;
+}
