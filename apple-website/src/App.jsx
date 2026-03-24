@@ -5,6 +5,7 @@ import Neo from './Neo/Neo';
 import IPhone from './IPhone/IPhone';
 import Macbook from './Macbook/Macbook';
 import Extra from './Extra/Extra';
+import Air from './Air/Air';
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
         <IPhone />
         <Macbook />
         <Extra />
+        <Air />
     </div>
   )
 }

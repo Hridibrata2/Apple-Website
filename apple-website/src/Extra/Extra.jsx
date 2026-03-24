@@ -1,30 +1,27 @@
 import React from "react";
 import years from "../assets/50_years.png";
-import air from "../assets/macbook_air.png";
+import headphone from "../assets/headphones.png";
 import "./Extra.css";
 
 const Extra = () => {
   return (
     <div className="extra">
-      <div className="left">
-        <div className="anni_img">
-          <img src={years} alt="50 years of innovation" />
-        </div>
-        <div className="button">
-          <button className="letter">Read the letter from Tim</button>
-        </div>
+     <div className="left">
+      <img src={years} alt="50 years" className="years" />
+      <button className="button">Read the letter from Tim</button>
+     </div>
+     <div className="right">
+      <img src={headphone} alt="headphone" className="headphone" />
+      <h1 className="headphone_text">AirPods Max 2</h1>
+      <h3 className="quotes">Listening. Remastered.</h3>
+      <p className="line2">Order from 25 March</p>
+      <p className="line3">Available early next month</p>
+      <div className="buttons">
+        <button className="button1">Learn more</button>
+        <button className="button2">View pricing</button>
       </div>
-      <div className="right">
-        <h1>Macbook Air</h1>
-        <p>Now supercharged by M5.</p>
-        <div className="buttons">
-          <button className="learn">Learn more</button>
-          <button className="buy">Buy</button>
-        </div>
-        <div className="air_img">
-          <img src={air} alt="air_img" />
-        </div>
-      </div>
+     </div>
+     <div></div>
     </div>
   );
 };
