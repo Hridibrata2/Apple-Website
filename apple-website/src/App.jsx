@@ -6,6 +6,8 @@ import IPhone from './IPhone/IPhone';
 import Macbook from './Macbook/Macbook';
 import Extra from './Extra/Extra';
 import Air from './Air/Air';
+import Slope from './Slope/Slope';
+import Slideshow from './Slideshow/Slideshow';
 
 
 
@@ -19,6 +21,8 @@ const App = () => {
         <Macbook />
         <Extra />
         <Air />
+        <Slope />
+        <Slideshow />
     </div>
   )
 }
