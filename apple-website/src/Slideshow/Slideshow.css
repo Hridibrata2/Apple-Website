@@ -1,45 +1,104 @@
 .slideshow {
-  position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
+  position: relative;
+  padding: 3px 0 30px;
+}
+
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  will-change: transform;
 }
 
 .slide {
+  min-width: 70vw;
+  height: 600px;
+  flex-shrink: 0;
   position: relative;
-  width: 100%;
-  height: 100%;
-  
+  opacity: 0.35;
+  transform: scale(0.92);
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
-.background {
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+
 
 .overlay {
   position: absolute;
-  bottom: 20%;
-  left: 5%;
-  color: white;
-}
-
-.logo {
-  width: 300px;
-}
-
-.play-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
+  bottom: 30px;
+  left: 25px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 15px;
+  color: white;
+}
+
+.overlay button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.overlay p {
+  font-size: 20px;
+  margin: 0;
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background: #bababa;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active-dot {
+  background: rgb(62, 60, 60) !important;
+}
+
+
+.pause-btn {
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+  border: none;
+  background: #ddd;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
 }
