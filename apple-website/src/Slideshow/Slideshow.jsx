@@ -93,7 +93,7 @@ useEffect(() => {
             {i === index && (
               <div className="overlay">
                 <button>Stream now</button>
-                <p>
+                <p> 
                   <strong>{movie.title}</strong>
                 </p>
               </div>
