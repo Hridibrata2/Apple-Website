@@ -79,7 +79,7 @@ useEffect(() => {
       <div
         className="carousel-track"
         style={{
-          transform: `translateX(calc(-${index * 69}% - ${index * 3}px))`,
+          transform: `translateX(calc(15vw - ${index * (70)}vw - ${index * 20}px))`,    
           transition: transition ? "transform 0.7s ease-in-out" : "none",
         }}
       >
