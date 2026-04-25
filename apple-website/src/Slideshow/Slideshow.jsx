@@ -20,7 +20,7 @@ const Slideshow = () => {
           params: {
             api_key: API_KEY,
             language: "en-US",
-            page: 3,
+            page: 2,
           },
         }
       );
