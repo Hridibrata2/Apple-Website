@@ -28,6 +28,7 @@
     padding-left: 255px;
     font-weight: 400;
     color: rgb(71, 69, 69);
+    cursor: pointer;
 }
 
 .explore h3{
@@ -35,6 +36,7 @@
     margin-top: 6px;
     font-size: 22px;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 
 .compare{
@@ -45,4 +47,40 @@
 .switch{
   margin: 0px;
   font-size: 12px;
+}
+
+.shop p{
+  font-size: 12px;
+  padding-left: 90px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(71, 69, 69);
+  cursor: pointer;
+}
+
+.shop h2{
+  padding-left: 90px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.more p{
+  font-size: 12px;
+  padding-left: 80px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(71, 69, 69);
+  cursor: pointer;
+}
+
+.more h3{
+  padding-left: 80px;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  cursor: pointer;
 }

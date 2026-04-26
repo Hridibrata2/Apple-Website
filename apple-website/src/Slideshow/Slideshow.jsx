@@ -25,7 +25,7 @@ const Slideshow = () => {
         }
       );
 
-      const data = response.data.results.slice(0, 8);
+      const data = response.data.results.slice(0, 10);
       console.log(data)
       setMovies([data[data.length - 1], ...data, data[0]]);
     };
