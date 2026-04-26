@@ -27,7 +27,13 @@ const Navbar = () => {
       <h4>Mac</h4>
       {menu === "mac" && <MacList />}
       </div>
+      <div className="nav-item"
+      onMouseEnter={() => setMenu("ipad")}
+      onMouseLeave={() => setMenu("")}
+      >
       <h4>iPad</h4>
+      {menu === "ipad" && <iPadist />}
+      </div>
       <h4>iPhone</h4>
       <h4>Watch</h4>
       <h4>AirPods</h4>
