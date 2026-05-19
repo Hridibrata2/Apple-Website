@@ -11,29 +11,59 @@ const Slideshow = () => {
   const [transition, setTransition] = useState(true);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  
   useEffect(() => {
     const fetchMovies = async () => {
-      const response = await axios.get(
-        "https://api.themoviedb.org/3/movie/popular",
-        {
-          params: {
-            api_key: API_KEY,
-            language: "en-US",
-            page: 2,
-          },
-        }
-      );
+      try {
+        const response = await axios.get(
+          "https://api.themoviedb.org/3/movie/popular",
+          {
+            params: {
+              api_key: API_KEY,
+              language: "en-US",
+              page: 1,
+            },
+          }
+        );
 
-      const data = response.data.results.slice(0, 10);
-      console.log(data)
-      setMovies([data[data.length - 1], ...data, data[0]]);
+        const moviesData = response.data.results.slice(0, 10);
+        console.log(moviesData);
+       
+        const moviesWithLogos = await Promise.all(
+          moviesData.map(async (movie) => {
+            const imageRes = await axios.get(
+              `https://api.themoviedb.org/3/movie/${movie.id}/images`,
+              {
+                params: {
+                  api_key: API_KEY,
+                },
+              }
+            );
+
+            const logo = imageRes.data.logos.find(
+              (logo) => logo.iso_639_1 === "en"
+            );
+
+            return {
+              ...movie,
+              logo: logo ? logo.file_path : null,
+            };
+          })
+        );
+
+        setMovies([
+          moviesWithLogos[moviesWithLogos.length - 1],
+          ...moviesWithLogos,
+          moviesWithLogos[0],
+        ]);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     fetchMovies();
+    
   }, []);
 
- 
   useEffect(() => {
     if (movies.length === 0 || !isPlaying) return;
 
@@ -44,7 +74,6 @@ const Slideshow = () => {
     return () => clearInterval(timer);
   }, [movies, isPlaying]);
 
-  
   useEffect(() => {
     if (movies.length === 0) return;
 
@@ -59,28 +88,31 @@ const Slideshow = () => {
       setTimeout(() => {
         setTransition(false);
         setIndex(movies.length - 2);
-      }, 800);
+      }, 700);
     }
   }, [index, movies]);
 
- 
-useEffect(() => {
-  if (!transition) {
-    requestAnimationFrame(() => {
+  useEffect(() => {
+    if (!transition) {
       requestAnimationFrame(() => {
-        setTransition(true);
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
       });
-    });
-  }
-}, [transition]);
+    }
+  }, [transition]);
 
   return (
     <div className="slideshow">
       <div
         className="carousel-track"
         style={{
-          transform: `translateX(calc(15vw - ${index * (70)}vw - ${index * 20}px))`,    
-          transition: transition ? "transform 0.7s ease-in-out" : "none",
+          transform: `translateX(calc(15vw - ${
+            index * 70
+          }vw - ${index * 20}px))`,
+          transition: transition
+            ? "transform 0.7s ease-in-out"
+            : "none",
         }}
       >
         {movies.map((movie, i) => (
@@ -92,17 +124,25 @@ useEffect(() => {
 
             {i === index && (
               <div className="overlay">
-                <button>Stream now</button>
-                <p> 
-                  <strong>{movie.title}</strong>
-                </p>
+                <div className="movie-info">
+                  {movie.logo ? (
+                    <img
+                      className="movie-logo"
+                      src={`${IMAGE_BASE_URL}${movie.logo}`}
+                      alt={movie.title}
+                    />
+                  ) : (
+                    <h1>{movie.title}</h1>
+                  )}
+
+                  <button>Stream now</button>
+                </div>
               </div>
             )}
           </div>
         ))}
       </div>
 
-      
       <div className="dots">
         {movies.slice(1, -1).map((_, i) => (
           <span

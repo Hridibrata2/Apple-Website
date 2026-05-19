@@ -5,15 +5,6 @@
   padding: 3px 0 35px;
 }
 
-
-.carousel-wrapper {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-
 .carousel-track {
   display: flex;
   gap: 20px;
@@ -32,42 +23,51 @@
 
 .slide.active {
   opacity: 1;
-  transform: scale(1);
 }
 
-.slide img {
+.slide > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-
 .overlay {
   position: absolute;
   bottom: 30px;
   left: 25px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
   color: white;
 }
 
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.movie-logo {
+  width: 250px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  object-fit: cover;
+}
+
+.movie-info h1 {
+  font-size: 38px;
+  margin: 0;
+}
+
 .overlay button {
+  width: fit-content;
   background: white;
   color: black;
   border: none;
-  padding: 12px 22px;
+  padding: 10px 15px;
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
 }
-
-.overlay p {
-  font-size: 20px;
-  margin: 0;
-}
-
 
 .dots {
   position: absolute;
@@ -89,11 +89,10 @@
   background: rgb(62, 60, 60) !important;
 }
 
-
 .pause-btn {
   position: absolute;
-  bottom: 3px;
-  right: 20px;
+  bottom: 5px;
+  right: 10px;
   border: none;
   background: #ddd;
   width: 25px;
