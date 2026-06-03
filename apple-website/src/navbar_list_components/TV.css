@@ -1,4 +1,4 @@
-.air_pod{
+.TV {
   position: absolute;
   top: 100%;
   left: 0;
@@ -19,102 +19,124 @@
   -webkit-backdrop-filter: blur(18px);
   opacity: 0;
   transform: translateY(-20px);
-  animation: dropdownFade 0.35s ease forwards;
+  animation: dropdownFade 0.7s ease forwards;
 }
 
-.airpods{
+.tv_list {
   display: flex;
   flex-direction: column;
   min-width: 260px;
   margin-left: 225px;
 }
 
-.airpods p{
+.tv_list p {
   font-size: 13px;
   font-weight: 400;
   color: rgb(90, 90, 90);
+
   margin: 0 0 12px 0;
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
-.airpods h3{
+.tv_list h3 {
   margin: 0 0 8px 0;
+
   font-size: 24px;
   font-weight: 500;
   color: black;
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
-.sound{
-  margin-top: 12px !important;
-  margin-bottom: 4px !important;
-  font-size: 13px !important;
-  font-weight: 400;
-  color: rgb(10, 10, 10);
-}
-
-.music{
+.home {
   display: flex;
   flex-direction: column;
   padding-top: 3px;
 }
 
-.music p{
+.home p {
   font-size: 13px;
   font-weight: 400;
   color: rgb(90, 90, 90);
+
   margin: 0 0 18px 0;
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
-.music h2{
+.home h2 {
   margin: 0 0 10px 0;
+
   font-size: 13px;
   font-weight: 400;
   color: rgb(28, 27, 27);
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
-.More_from_Airpods{
+.check {
   display: flex;
   flex-direction: column;
   padding-top: 3px;
 }
 
-.More_from_Airpods p{
+.check p {
   font-size: 13px;
   font-weight: 400;
   color: rgb(90, 90, 90);
-  margin: 0 0 13px 0;
+
+  margin: 0 0 18px 0;
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
-.More_from_Airpods h3{
+.check h3 {
   margin: 0 0 10px 0;
+
   font-size: 13px;
   font-weight: 400;
   color: rgb(28, 27, 27);
+
   cursor: pointer;
+
   opacity: 0;
   transform: translateY(10px);
+
   animation: itemFade 0.5s ease forwards;
 }
 
+.tv_list p:hover,
+.home p:hover,
+.check p:hover {
+  color: black;
+  transition: 0.25s ease;
+}
 
 @keyframes dropdownFade {
   to {
@@ -130,16 +152,26 @@
   }
 }
 
+.tv_list h3:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.tv_list h3:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.tv_list h3:nth-child(4) {
+  animation-delay: 0.3s;
+}
 
+.home h2:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.home h2:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
-
-.phone h3:nth-child(1) { animation-delay: 0.1s; }
-.phone h3:nth-child(2) { animation-delay: 0.2s; }
-.phone h3:nth-child(3) { animation-delay: 0.3s; }
-.phone h3:nth-child(4) { animation-delay: 0.4s; }
-
-.shop_iphone h2:nth-child(1) { animation-delay: 0.2s; }
-.shop_iphone h2:nth-child(2) { animation-delay: 0.3s; }
-
-.More_from_iPhone h2:nth-child(1) { animation-delay: 0.3s; }
-.More_from_iPhone h2:nth-child(2) { animation-delay: 0.4s; }
+.check h3:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.check h3:nth-child(3) {
+  animation-delay: 0.4s;
+}

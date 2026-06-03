@@ -96,7 +96,7 @@
   cursor: pointer;
   opacity: 0;
   transform: translateY(10px);
-  animation: itemFade 0.5s ease forwards;
+  animation: itemFade 0.7s ease forwards;
 }
 
 .more {

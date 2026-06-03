@@ -8,8 +8,11 @@ import MacList from "../navbar_list_components/MacList";
 import IpadList from "../navbar_list_components/IpadList";
 import IphoneList from "../navbar_list_components/IphoneList";
 import Watch from "../navbar_list_components/Watch";
-// import Airpod from "../navbar_list_components/Airpod";
 import Airpod from './../navbar_list_components/Airpod';
+import TV from './../navbar_list_components/TV';
+import Entertainment from './../navbar_list_components/Entertainment';
+import Accessories from './../navbar_list_components/Accessories';
+import Support from './../navbar_list_components/Support';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("");
@@ -62,10 +65,34 @@ const Navbar = () => {
       <h4>AirPods</h4>
       {menu === "airpod" && <Airpod />} 
       </div>
+      <div 
+       onMouseEnter={() => setMenu("tv")}
+       onMouseLeave={() => setMenu("")}
+      >
       <h4>TV & Home</h4>
+      {menu === "tv" && <TV />}
+      </div>
+      <div 
+      onMouseEnter={()=> setMenu("entertainment")}
+      onMouseLeave={() => setMenu("")}
+      >
       <h4>Entertainment</h4>
+      {menu === "entertainment" && <Entertainment />}
+      </div>
+      <div
+      onMouseEnter={() => setMenu("accessories")}
+      onMouseLeave={() => setMenu("")}
+      >
       <h4>Accessories</h4>
+      {menu === "accessories" && <Accessories />}
+      </div>
+      <div
+      onMouseEnter={() => setMenu("support")}
+      onMouseLeave={() => setMenu("")}
+      >
       <h4>Support</h4>
+      {menu === "support" && <Support />}
+      </div>
       <CiSearch size={17} className="search" />
       <PiBagSimpleLight size={18} className="bag" />
     </div>

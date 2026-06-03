@@ -1,0 +1,130 @@
+.footer {
+    padding-left: 310px;
+    padding-right: 310px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #f5f5f7;
+}
+
+.footer-text p {
+    font-size: 12.7px;
+    color: #6e6e73;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.footer-text hr {
+    border: none;
+    border-top: 1px solid #d2d2d7;
+    margin: 25px 0;
+}
+
+
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+}
+
+.footer-column p {
+    font-size: 12px;
+    color: #6e6e73;
+    margin: 0 0 10px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+    color: #1d1d1f;
+}
+
+.section-gap {
+    margin-top: 25px;
+}
+
+ 
+
+.footer-bottom {
+    margin-top: 15px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #6e6e73;
+    margin-bottom: 10px;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-row span {
+    font-size: 12px;
+    color: #6e6e73;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links span {
+    cursor: pointer;
+}
+
+.footer-bottom-links span:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 1200px) {
+    .footer {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+.more-ways-to-shop u{
+    color: #0077ed;
+}

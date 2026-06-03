@@ -8,6 +8,7 @@ import Extra from './Extra/Extra';
 import Air from './Air/Air';
 import Slope from './Slope/Slope';
 import Slideshow from './Slideshow/Slideshow';
+import Footer from './Footer/Footer';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Air />
         <Slope />
         <Slideshow />
+        <Footer />
     </div>
   )
 }
